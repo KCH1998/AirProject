@@ -40,50 +40,78 @@
 - **IDE**: Eclipse (Dynamic Web Project)
 
 ---
-
-📁 프로젝트 구조 (핵심)
+📂 프로젝트 구조 (AirProject-main)
 AirProject-main/
-├─ src/main/java/
-│  ├─ dao/              # MemberDAO (회원 CRUD/로그인)
-│  ├─ servlet/          # 예약/관리/인증 관련 서블릿
-│  └─ util/DBUtil.java  # DB 연결 유틸(회원 DAO가 사용)
-└─ src/main/webapp/
-   ├─ *.jsp, *.css
-   └─ WEB-INF/
-      ├─ web.xml
-      └─ lib/           # (프로젝트에 포함된 jar들)
+├─ .classpath
+├─ .project
+├─ .settings/
+│  └─ ... (Eclipse 설정 파일들)
+├─ AirProject.sql              # Oracle 스키마/쿼리
+├─ build/
+│  └─ classes/
+│     └─ .gitignore
+├─ README.md                   # 기존 리드미(원하면 새로 작성)
+└─ src/
+   └─ main/
+      ├─ java/
+      │  ├─ dao/
+      │  │  └─ MemberDAO.java
+      │  ├─ servlet/
+      │  │  ├─ cancelReservation.java
+      │  │  ├─ DeleteAccountServlet.java
+      │  │  ├─ DeleteReservationServlet.java
+      │  │  ├─ DeleteUserServlet.java
+      │  │  ├─ EditUserServlet.java
+      │  │  ├─ InquiryServlet.java
+      │  │  ├─ LoginServlet.java
+      │  │  ├─ LogoutServlet.java
+      │  │  ├─ ManageReservationsServlet.java
+      │  │  ├─ ManageUsersServlet.java
+      │  │  ├─ Member.java
+      │  │  ├─ MyReservationsServlet.java
+      │  │  ├─ RegisterServlet.java
+      │  │  ├─ Reservation.java
+      │  │  ├─ ReservationServlet1.java
+      │  │  └─ UpdateProfileServlet.java
+      │  └─ util/
+      │     └─ DBUtil.java
+      └─ webapp/
+         ├─ AdminDashboard.jsp
+         ├─ EditProfile.jsp
+         ├─ editUser.jsp
+         ├─ error.html
+         ├─ fail.jsp
+         ├─ flight.jsp
+         ├─ flight.css
+         ├─ flight_1.css
+         ├─ inquiryForm.jsp
+         ├─ login.jsp
+         ├─ loginsuccess.jsp
+         ├─ main.jsp
+         ├─ main.css
+         ├─ manageReservations.jsp
+         ├─ manageUsers.jsp
+         ├─ my_reservations.jsp
+         ├─ Mypage.jsp
+         ├─ reservation_success.jsp
+         ├─ signup.jsp
+         ├─ style.css
+         ├─ success.jsp
+         ├─ test.css
+         ├─ META-INF/
+         │  └─ MANIFEST.MF
+         └─ WEB-INF/
+            ├─ lib/
+            │  ├─ commons-fileupload2-core-2.0.0-M2.jar
+            │  ├─ commons-fileupload2-jakarta-2.0.0-M1.jar
+            │  ├─ commons-io-2.19.0.jar
+            │  ├─ jakarta.servlet.jsp.jstl-3.0.0.jar
+            │  ├─ jakarta.servlet.jsp.jstl-api-3.0.0.jar
+            │  ├─ ojdbc11-23.3.0.23.09.jar
+            │  ├─ ojdbc11.jar
+            │  └─ standard.jar
+            └─ web.xml
 
-
-DB 코드
--- 회원
-CREATE TABLE MEMBER (
-  NAME   VARCHAR2(20) NOT NULL,
-  USERID VARCHAR2(20) PRIMARY KEY,
-  PWD    VARCHAR2(20) NOT NULL,
-  PHONE  CHAR(20),
-  EMAIL  VARCHAR2(20)
-);
-
--- 예약
-
-CREATE TABLE RESERVATION (
-  RES_ID        NUMBER PRIMARY KEY,
-  USER_ID       VARCHAR2(50),
-  TRIP_TYPE     VARCHAR2(10), -- ONE_WAY or ROUND
-  ORIGIN        VARCHAR2(10),
-  DESTINATION   VARCHAR2(10),
-  DEPART_DATE   DATE,
-  RETURN_DATE   DATE,
-  ADULT_COUNT   NUMBER,
-  CHILD_COUNT   NUMBER,
-  INFANT_COUNT  NUMBER,
-  CREATED_AT    DATE DEFAULT SYSDATE
-);
-
-CREATE SEQUENCE RESERVATION_SEQ
-START WITH 1
-INCREMENT BY 1
-NOCACHE;
 
 실행 방법 (Eclipse + Tomcat)
 1) Oracle 준비
