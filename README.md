@@ -40,7 +40,10 @@
 - **IDE**: Eclipse (Dynamic Web Project)
 
 ---
-📂 AirProject-main
+## 📂 프로젝트 구조
+
+```text
+AirProject-main
 ├─ .classpath
 ├─ .project
 ├─ .settings/
@@ -57,11 +60,9 @@
 │     ├─ java/
 │     │  ├─ dao/
 │     │  │  └─ MemberDAO.java
-│     │  │
 │     │  ├─ servlet/
 │     │  │  ├─ Member.java
 │     │  │  ├─ Reservation.java
-│     │  │  │
 │     │  │  ├─ LoginServlet.java
 │     │  │  ├─ LogoutServlet.java
 │     │  │  ├─ RegisterServlet.java
@@ -69,59 +70,34 @@
 │     │  │  ├─ UpdateProfileServlet.java
 │     │  │  ├─ DeleteAccountServlet.java
 │     │  │  ├─ DeleteUserServlet.java
-│     │  │  │
 │     │  │  ├─ ReservationServlet1.java
 │     │  │  ├─ MyReservationsServlet.java
 │     │  │  ├─ ManageReservationsServlet.java
 │     │  │  ├─ DeleteReservationServlet.java
 │     │  │  ├─ cancelReservation.java
-│     │  │  │
 │     │  │  ├─ ManageUsersServlet.java
 │     │  │  └─ InquiryServlet.java
-│     │  │
 │     │  └─ util/
 │     │     └─ DBUtil.java
-│     │
 │     └─ webapp/
-│        ├─ AdminDashboard.jsp
-│        ├─ EditProfile.jsp
-│        ├─ Mypage.jsp
-│        ├─ editUser.jsp
-│        ├─ inquiryForm.jsp
-│        ├─ manageReservations.jsp
-│        ├─ manageUsers.jsp
-│        ├─ my_reservations.jsp
-│        │
 │        ├─ login.jsp
-│        ├─ loginsuccess.jsp
 │        ├─ signup.jsp
-│        ├─ success.jsp
-│        ├─ fail.jsp
-│        ├─ error.html
-│        │
+│        ├─ main.jsp
+│        ├─ AdminDashboard.jsp
+│        ├─ manageUsers.jsp
+│        ├─ manageReservations.jsp
+│        ├─ my_reservations.jsp
+│        ├─ inquiryForm.jsp
 │        ├─ flight.jsp
 │        ├─ reservation_success.jsp
-│        │
 │        ├─ style.css
 │        ├─ main.css
 │        ├─ flight.css
-│        ├─ flight_1.css
-│        ├─ test.css
-│        │
-│        ├─ META-INF/
-│        │  └─ MANIFEST.MF
-│        │
 │        └─ WEB-INF/
 │           ├─ web.xml
 │           └─ lib/
 │              ├─ ojdbc11.jar
-│              ├─ ojdbc11-23.3.0.23.09.jar
-│              ├─ commons-io-2.19.0.jar
-│              ├─ commons-fileupload2-core-2.0.0-M2.jar
-│              ├─ commons-fileupload2-jakarta-2.0.0-M1.jar
-│              ├─ jakarta.servlet.jsp.jstl-api-3.0.0.jar
-│              ├─ jakarta.servlet.jsp.jstl-3.0.0.jar
-│              └─ standard.jar
+│              └─ jakarta.servlet.jsp.jstl-3.0.0.jar
 
 
 
