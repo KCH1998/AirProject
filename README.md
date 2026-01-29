@@ -106,12 +106,12 @@ AirProject-main
 Oracle XE 실행
 위 DDL 실행(MEMBER, RESERVATION, RESERVATION_SEQ 생성)
 
-3) Eclipse 프로젝트 로드
+2) Eclipse 프로젝트 로드
 프로젝트 Import (Dynamic Web Project 형태)
 Server(Runtime)에 Tomcat 10+ 등록
-4) JDBC 드라이버
+3) JDBC 드라이버
 Oracle JDBC 드라이버(ojdbc)가 필요함.
 
-5) 실행
+4) 실행
 Eclipse → Run on Server
 접속: http://localhost:8080/<context>/main.jsp
